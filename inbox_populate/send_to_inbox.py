@@ -1,6 +1,6 @@
 import csv
 import requests
-import getpass
+from getpass import getpass
 
 
 def send_to_inbox(username, password, link):
@@ -28,7 +28,7 @@ def send_to_inbox(username, password, link):
 
 link = input("Please provide the URL to your Rasa X server.\n")
 username = input("Username: ")
-password = getpass.getpass("Password: ")
+password = getpass()
 
 send_to_inbox(username, password, link)
 
